@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'laboratorio 3 acevedo'),
     );
   }
 }
@@ -68,6 +68,21 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decreaseCounter() {
+    setState(() {
+
+      _counter--;
+    });
+  }
+
+  void _resetCounter() {
+    setState(() {
+
+      _counter = 0;
+    });
+  }
+  
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -81,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(255, 231, 37, 37),
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
@@ -120,6 +135,26 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      persistentFooterAlignment: AlignmentDirectional.bottomCenter,
+      persistentFooterButtons: [
+        Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            
+          FloatingActionButton(
+            onPressed: _decreaseCounter,
+            child: const Icon(Icons.minimize),
+            tooltip: 'Decrease'
+          ),
+           FloatingActionButton(
+            onPressed: _resetCounter,
+            child: const Icon(Icons.restore),
+            tooltip: 'Reset'
+          ),
+          ],           
+        )
+     ],
     );
   }
 }
