@@ -21,6 +21,7 @@ class _HomeState extends State<Home> {
   String icono = "assets/icons/default.svg";
   String estadoVictoria = " ";
 
+  //lab7
   _MyHomePageState() {
     print('constructor de _HomeState [creando objeto]');
     print('..........................');
@@ -70,6 +71,7 @@ class _HomeState extends State<Home> {
   }
 
 
+  //temas del counter
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -91,6 +93,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+  //condición de victoria
   void verificarEstado(){
     switch(_counter){
       case 15: 
@@ -143,6 +146,7 @@ class _HomeState extends State<Home> {
 
               SvgPicture.asset(icono, height: 100, width: 100,),
 
+              //botones del counter
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -167,23 +171,28 @@ class _HomeState extends State<Home> {
         ),
       ),
 
+      //botones siguientes pantallas
       persistentFooterAlignment: AlignmentDirectional.bottomCenter,
       persistentFooterButtons: <Widget>[
+        //detalles
         ElevatedButton(
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Detalles())); //ir a Detail
+                builder: (context) => const Detalles())
+            ); 
           },
             child: const Text("Detalles")
         ),
+        //lista
         ElevatedButton(
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Lista())); //ir a Detail
+                builder: (context) => const Lista())
+            ); 
           },
             child: const Text("Lista")
         ),

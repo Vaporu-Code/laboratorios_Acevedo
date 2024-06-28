@@ -16,9 +16,11 @@ class _DetallesState extends State<Detalles> {
         backgroundColor: Color.fromARGB(255, 231, 37, 37),
         title: Text('Contador'),
       ),
+
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //detalles de la app
           children: [
             Text('Aquí hay detalles de la aplicación',
                 style: TextStyle(fontFamily: "Heycomic", fontSize: 30)),
@@ -27,6 +29,7 @@ class _DetallesState extends State<Detalles> {
       ),
       persistentFooterAlignment: AlignmentDirectional.bottomCenter,
       persistentFooterButtons: <Widget>[
+        //boton para volver
         ElevatedButton(
           onPressed: () {
             Navigator.pop(context);

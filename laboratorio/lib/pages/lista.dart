@@ -20,6 +20,7 @@ class _ListaState extends State<Lista> {
       body: Center(
         child: ListView(
           children: <Widget>[
+            //elementos de la lista
             Container(
               height: 50,
               color: Color.fromARGB(1, 201, 173, 19),
@@ -52,6 +53,7 @@ class _ListaState extends State<Lista> {
       ),
       persistentFooterAlignment: AlignmentDirectional.bottomCenter,
       persistentFooterButtons: <Widget>[
+        //boton para volver
         ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
