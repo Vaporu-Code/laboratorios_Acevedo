@@ -60,6 +60,9 @@ flutter:
 
   assets:
     - assets/icons/arrow-down-svgrepo-com.svg
+    - assets/icons/default.svg
+    - assets/icons/lose.svg
+    - assets/icons/win.svg
 
 
   fonts:
