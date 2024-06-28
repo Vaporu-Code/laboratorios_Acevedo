@@ -121,6 +121,7 @@ class _HomeState extends State<Home> {
         title: Text('Contador'),
       ),
 
+      //drawer
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -129,13 +130,14 @@ class _HomeState extends State<Home> {
               decoration: BoxDecoration(
                 color: Color.fromARGB(1, 214, 146, 146),
               ),
-              child: Text('Drawe', 
-                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+              child: Text('Drawer', 
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 20)),
             ),
 
+            //elementos
             ListTile(
               title: const Text('Home',
-                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 20)),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -143,7 +145,7 @@ class _HomeState extends State<Home> {
 
             ListTile(
               title: const Text('Lista',
-                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 20)),
               onTap: () {
                 Navigator.push(
                   context,
@@ -154,7 +156,7 @@ class _HomeState extends State<Home> {
 
             ListTile(
               title: const Text('Detalles',
-                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 20)),
               onTap: () {
                 Navigator.push(
                   context,
@@ -165,7 +167,7 @@ class _HomeState extends State<Home> {
 
             ListTile(
               title: const Text('Gestos',
-                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 20)),
               onTap: () {
                 Navigator.push(
                   context,
@@ -176,7 +178,7 @@ class _HomeState extends State<Home> {
 
             ListTile(
               title: const Text('Sensor',
-                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 20)),
               onTap: () {
                 Navigator.push(
                   context,
