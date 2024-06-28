@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:laboratorio/pages/gestos.dart';
 import 'package:laboratorio/pages/lista.dart';
+import 'package:laboratorio/pages/sensor.dart';
 import 'detalles.dart';
 import 'detalles.dart';
 
@@ -119,6 +121,74 @@ class _HomeState extends State<Home> {
         title: Text('Contador'),
       ),
 
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(1, 214, 146, 146),
+              ),
+              child: Text('Drawe', 
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+            ),
+
+            ListTile(
+              title: const Text('Home',
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+
+            ListTile(
+              title: const Text('Lista',
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Lista()),
+                  );
+              },
+            ),
+
+            ListTile(
+              title: const Text('Detalles',
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Detalles()),
+                  );
+              },
+            ),
+
+            ListTile(
+              title: const Text('Gestos',
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Gestos()),
+                  );
+              },
+            ),
+
+            ListTile(
+              title: const Text('Sensor',
+                style: TextStyle(fontFamily: "Heycomic", fontSize: 10)),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Sensor()),
+                  );
+              },
+            ),
+
+          ],
+        ),
+      ),
+
 
       body: Center(
         child: Card(
@@ -171,33 +241,8 @@ class _HomeState extends State<Home> {
         ),
       ),
 
-      //botones siguientes pantallas
-      persistentFooterAlignment: AlignmentDirectional.bottomCenter,
-      persistentFooterButtons: <Widget>[
-        //detalles
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Detalles())
-            ); 
-          },
-            child: const Text("Detalles")
-        ),
-        //lista
-        ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Lista())
-            ); 
-          },
-            child: const Text("Lista")
-        ),
-      
-      ]
+      //botones siguientes pantallas 
+      //fueron eliminados y remplazados por el drawer
         
       
     );
