@@ -78,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             const Text(
               'You have pushed the button this many times:',
+              style: TextStyle(fontFamily: 'Heycomic', fontSize: 30),
             ),
 
             SvgPicture.asset(
@@ -88,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Text(
               '$_counter',
-              style: TextStyle(fontFamily: 'Heycomic', fontSize: 20),
+              style: TextStyle(fontFamily: 'Heycomic', fontSize: 30),
             ),
             
           ],

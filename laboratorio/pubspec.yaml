@@ -61,10 +61,11 @@ flutter:
   assets:
     - assets/icons/arrow-down-svgrepo-com.svg
 
+
   fonts:
     - family: Heycomic
       fonts:
-        - assets: fonts/Hey Comic.ttf
+        - asset: fonts/Hey_Comic.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
