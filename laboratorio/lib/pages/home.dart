@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
       break;
       default: 
         estadoVictoria = " ";
-        icono ="assets/icons/default";
+        icono ="assets/icons/default.svg";
       break;
     }
   }
@@ -87,7 +87,21 @@ class _HomeState extends State<Home> {
               SvgPicture.asset(icono, height: 100, width: 100,),
 
               Row(
-
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FloatingActionButton(
+                    onPressed: _decreaseCounter,
+                    child: const Icon(Icons.minimize),
+                  ),
+                  FloatingActionButton(
+                    onPressed: _resetCounter,
+                    child: const Icon(Icons.restore),
+                  ),
+                  FloatingActionButton(
+                    onPressed: _incrementCounter,
+                    child: const Icon(Icons.add),
+                  ),
+                ],
                 
               ),
 
@@ -95,29 +109,10 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-      persistentFooterAlignment: AlignmentDirectional.bottomCenter,
-      persistentFooterButtons: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            FloatingActionButton(
-              onPressed: _decreaseCounter,
-              child: const Icon(Icons.minimize),
-              tooltip: 'Decrease',
-            ),
-            FloatingActionButton(
-              onPressed: _resetCounter,
-              child: const Icon(Icons.restore),
-              tooltip: 'Reset',
-            ),
-          ],
-        ),
-      ],
+      
+      
+        
+      
     );
   }
 }
