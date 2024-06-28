@@ -22,7 +22,7 @@ class _ListaState extends State<Lista> {
           children: <Widget>[
             Container(
               height: 50,
-              color: Color.fromARGB(1, 219, 191, 29),
+              color: Color.fromARGB(1, 201, 173, 19),
               child: const Center(
                 child: Text('uno',
                 style: TextStyle(fontFamily: "Heycomic", fontSize: 30))
