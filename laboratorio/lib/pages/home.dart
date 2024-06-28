@@ -8,13 +8,67 @@ class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  
+  State<Home> createState() {
+    print('función createState [crear statado]');
+    print('..........................');
+    return _HomeState();
+  } 
 }
 
 class _HomeState extends State<Home> {
   int _counter = 0;
   String icono = "assets/icons/default.svg";
   String estadoVictoria = " ";
+
+  _MyHomePageState() {
+    print('constructor de _HomeState [creando objeto]');
+    print('..........................');
+  }
+
+  void initState() {
+    super.initState();
+    print('Función initState [Inicializando el estado actual]');
+    print('initState [mounted = $mounted]');
+    print('..........................');
+  }
+
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print('función didChangeDependencies [Cambiar Dependencias]');
+    print('..........................');
+  }
+
+  void didUpdateWidget(covariant Home oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print('función didUpdateWidget [Actualizar Widget]');
+    print('..........................');
+  }
+
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+    print('función setState [Reestablecer estado]');
+    print('..........................');
+  }
+
+  void deactivate() {
+    print('función deactivate [remover widget]');
+    print('..........................');
+    super.deactivate();
+  }
+
+  void dispose() {
+    super.dispose();
+    print('función dispose: eliminando');
+    print('dispose: mounted = $mounted');
+    print('..........................');
+  }
+
+  void reassemble() {
+    super.reassemble();
+    print('función reassemble: mounted = $mounted');
+  }
+
 
   void _incrementCounter() {
     setState(() {
@@ -131,7 +185,7 @@ class _HomeState extends State<Home> {
               MaterialPageRoute(
                 builder: (context) => const Lista())); //ir a Detail
           },
-            child: const Text("Detalles")
+            child: const Text("Lista")
         ),
       
       ]
