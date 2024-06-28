@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:laboratorio/pages/lista.dart';
+import 'detalles.dart';
+import 'detalles.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -109,8 +112,29 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+
+      persistentFooterAlignment: AlignmentDirectional.bottomCenter,
+      persistentFooterButtons: <Widget>[
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Detalles())); //ir a Detail
+          },
+            child: const Text("Detalles")
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Lista())); //ir a Detail
+          },
+            child: const Text("Detalles")
+        ),
       
-      
+      ]
         
       
     );
