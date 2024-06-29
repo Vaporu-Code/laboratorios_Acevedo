@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:laboratorio/pages/gestos.dart';
-import 'package:laboratorio/pages/lista.dart';
-import 'package:laboratorio/pages/sensor.dart';
 import 'detalles.dart';
-import 'detalles.dart';
+import 'lista.dart';
+import 'gestos.dart';
+import 'sensor.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
